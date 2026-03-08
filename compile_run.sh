@@ -14,6 +14,7 @@ echo ""
 echo ">>> Compiling SERIAL versions..."
 cd serial_version
 
+gcc grayscale.c           -o grayscale_serial   -lm
 gcc sobel_filter.c        -o sobel_serial    -lm
 gcc laplacian_filter.c    -o laplacian_serial -lm
 
@@ -22,6 +23,7 @@ echo "Serial compile done."
 echo ""
 echo ">>> Running SERIAL versions..."
 
+./grayscale_serial
 ./sobel_serial
 ./laplacian_serial
 
@@ -32,6 +34,7 @@ echo ""
 echo ">>> Compiling OPENMP versions..."
 cd openmp_version
 
+gcc -fopenmp grayscale.c           -o grayscale_omp   -lm
 gcc -fopenmp sobel_filter.c        -o sobel_omp    -lm
 gcc -fopenmp laplacian_filter.c    -o laplacian_omp -lm
 
