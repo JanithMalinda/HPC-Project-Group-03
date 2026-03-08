@@ -1,30 +1,3 @@
-/*
- * ============================================================
- *  SERIAL LAPLACIAN FILTER
- *  Member 3 – EG/2020/4064 – Malinda H. W. J.
- *  Group 03 | EC7207 HPC Project
- * ============================================================
- *
- *  WHAT IS THE LAPLACIAN FILTER?
- *  Like Sobel, it detects edges. But instead of measuring
- *  how much brightness changes (gradient), it measures
- *  how curved the brightness is (second derivative).
- *
- *  DIFFERENCE FROM SOBEL:
- *  → Sobel: finds WHERE an edge is and what direction it goes.
- *  → Laplacian: finds ALL edges at once, regardless of direction.
- *    Laplacian is simpler but more sensitive to noise.
- *
- *  3x3 LAPLACIAN KERNEL:
- *   0  -1   0
- *  -1  +4  -1
- *   0  -1   0
- *
- *  Reads as: take the center pixel × 4, subtract its 4 neighbors.
- *  If the pixel is in a flat region → all values similar → result ≈ 0 (dark)
- *  If the pixel is on an edge → big difference → result is high (bright)
- * ============================================================
- */
 
 #define STB_IMAGE_IMPLEMENTATION
 #define STB_IMAGE_WRITE_IMPLEMENTATION

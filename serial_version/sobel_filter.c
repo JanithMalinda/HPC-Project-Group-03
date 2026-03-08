@@ -1,34 +1,3 @@
-/*
- * ============================================================
- *  SERIAL SOBEL EDGE DETECTION FILTER
- *  Member 3 – EG/2020/4064 – Malinda H. W. J.
- *  Group 03 | EC7207 HPC Project
- * ============================================================
- *
- *  WHAT IS SOBEL EDGE DETECTION?
- *  It finds edges (sharp boundaries) in an image.
- *  An "edge" is a place where pixel brightness changes quickly.
- *
- *  HOW DOES IT WORK?
- *  It uses two 3x3 kernels to measure how fast brightness
- *  changes in the X direction (horizontal) and Y direction (vertical).
- *
- *  Gx kernel (detects vertical edges):      Gy kernel (detects horizontal edges):
- *  -1  0  +1                                -1 -2 -1
- *  -2  0  +2                                  0  0  0
- *  -1  0  +1                                +1 +2 +1
- *
- *  For each pixel:
- *    1. Convert to grayscale first (edges are easier to find on gray)
- *    2. Apply Gx kernel → how much change in X direction
- *    3. Apply Gy kernel → how much change in Y direction
- *    4. Magnitude = sqrt(Gx^2 + Gy^2)  → overall edge strength
- *    5. Clamp to [0, 255]
- *
- *  High magnitude = strong edge (bright in output)
- *  Low magnitude  = flat region (dark in output)
- * ============================================================
- */
 
 #define STB_IMAGE_IMPLEMENTATION
 #define STB_IMAGE_WRITE_IMPLEMENTATION

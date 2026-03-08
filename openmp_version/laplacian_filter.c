@@ -1,10 +1,3 @@
-/*
- * ============================================================
- *  OPENMP LAPLACIAN FILTER
- *  Member 3 – EG/2020/4064 – Malinda H. W. J.
- *  Group 03 | EC7207 HPC Project
- * ============================================================
- */
 
 #define STB_IMAGE_IMPLEMENTATION
 #define STB_IMAGE_WRITE_IMPLEMENTATION

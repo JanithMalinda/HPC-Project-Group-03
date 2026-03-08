@@ -1,16 +1,3 @@
-/*
- * ============================================================
- *  OPENMP SOBEL EDGE DETECTION FILTER
- *  Member 3 – EG/2020/4064 – Malinda H. W. J.
- *  Group 03 | EC7207 HPC Project
- * ============================================================
- *
- *  KEY OPENMP CHANGE:
- *  Grayscale step is also parallelized separately.
- *  Then the Sobel step is parallelized.
- *  Two separate  #pragma omp parallel for  regions.
- * ============================================================
- */
 
 #define STB_IMAGE_IMPLEMENTATION
 #define STB_IMAGE_WRITE_IMPLEMENTATION
